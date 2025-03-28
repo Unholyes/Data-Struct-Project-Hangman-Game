@@ -94,15 +94,16 @@ void startGame() {
 
 
     Category categories[] = { 
-    {"Computers", {"Keyboard", "Monitor", "Mouse", "Motherboard", "Laptop"}},
-    {"Food", {"Pizza", "Burger", "Pasta", "Sushi", "Steak"}},
-    {"Countries", {"Japan", "France", "Canada", "Brazil", "Germany"}},
-    {"Animals", {"Tiger", "Elephant", "Kangaroo", "Giraffe", "Penguin"}},
-    {"Sports", {"Football", "Basketball", "Tennis", "Baseball", "Cricket"}},
-    {"Movies", {"Titanic", "Inception", "Avatar", "Gladiator", "Interstellar"}},
-    {"Programming", {"Python", "Variable", "Function", "Compiler", "Algorithm"}},
-    {"Music", {"Guitar", "Piano", "Violin", "Drums", "Saxophone"}}
+    {"computers", {"keyboard", "monitor", "mouse", "motherboard", "laptop"}},
+    {"food", {"pizza", "burger", "pasta", "sushi", "steak"}},
+    {"countries", {"japan", "france", "canada", "brazil", "germany"}},
+    {"animals", {"tiger", "elephant", "kangaroo", "giraffe", "penguin"}},
+    {"sports", {"football", "basketball", "tennis", "baseball", "cricket"}},
+    {"movies", {"titanic", "inception", "avatar", "gladiator", "interstellar"}},
+    {"programming", {"python", "variable", "function", "compiler", "algorithm"}},
+    {"music", {"guitar", "piano", "violin", "drums", "saxophone"}}
 };
+
 
     int numCategories = sizeof(categories) / sizeof(categories[0]);
     int categoryChoice;
@@ -184,6 +185,7 @@ void startGame() {
 
         if (alreadyGuessed) {
             printCentered("You already guessed that letter. Try again.",1);
+            getchar();
             continue;
         }
 
